@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html,
+body {
+  background-color: #EBEFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+button{
+  background-color: #656ED3;
+  border-radius: 1.0625rem;
+  border: 1px #656ED3 solid;
+  color: #FFFFFF;
+  cursor: pointer;
+  height: 2.125rem;
+  margin-top: 1.8rem;
+}
+input {
+  background-color: transparent;
+  border-radius: 1.0625rem;
+  border: 1px #656ED3 solid;
+  height: 2.125rem;
+  padding: 0 0.75rem;
+}
+input.error{
+  border-color: #BB0A21;
+}
+aside{
+  margin: auto;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 2rem;
+}
+h1{
+  font-weight: bold;
+  color: #1A1A1A;
+  font-size: 1rem;
+  margin: 0rem 0 2.5rem 0;
+  text-align: center;
+  padding: 0 2rem;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+}
+section{
+  margin: auto;
+  max-width: 27rem;
+  width: 90%;
+}
+.errorMessage{
+  color: #BB0A21;
+  font-size: 0.7rem;
+  margin-top: -0.5rem
+}
+.bottom-message{
+  text-align: center;
+  padding: 2rem;
+}
+.main-image{
+  width: 100%;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main.mobile-reverse {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .main-image {
+    max-width: 300px;
+    width: 90%;
+  }
+  form, h1, .bottom-message{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  aside{
+    margin: 2rem auto;
+  }
+  section{
+    margin: 0 auto;
+    width: 100%;
+  }
+}
