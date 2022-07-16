@@ -1,19 +1,21 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link } from "react-router-dom";
+import SocialLinks from "../components/SocialLinks";
 import { VALID_EMAIL, VALID_PASSWORD } from "../constants";
 import useLocalStorage from "../hooks/useLocalStorage";
-
+import { displayError } from "../includes/form";
+import signUpImg from "../assets/signup.png"
 
 const SignUp = () => {
-  const [initialValues, setInitialValues] = useLocalStorage('signUpForm',{
+  const [initialValues, setInitialValues] = useLocalStorage("signUpForm", {
     fullName: "",
     userName: "",
     email: "",
     password: "",
-    confirmPassword: ""
-  })
-  const validate = (values) => {
-    setInitialValues(values)
+    confirmPassword: "",
+  });
+  const validate = (values, touched) => {
+    setInitialValues(values);
     const errors = {};
     if (!values.fullName) {
       errors.fullName = "Required";
@@ -21,7 +23,7 @@ const SignUp = () => {
 
     if (!values.userName) {
       errors.userName = "Required";
-    } 
+    }
 
     if (!values.email) {
       errors.email = "Required";
@@ -45,50 +47,67 @@ const SignUp = () => {
   };
 
   return (
-    <main>
-      <h1>Please Fill out form to Register!</h1>
-      <Formik
-        initialValues={initialValues}
-        validate={validate}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
-      >
-        {({ errors }) => (
-          <Form>
-            <label htmlFor="fullName">Full Name:</label>
-            <Field name="fullName" className={`${errors.fullName ? "error" : ""}`} />
-            <ErrorMessage name="fullName" />
-            
-            <label htmlFor="userName">Username:</label>
-            <Field name="userName" className={`${errors.userName ? "error" : ""}`} />
-            <ErrorMessage name="userName" />
+    <main className="sign-up">
+      <aside>
+        <img className="main-image" src={signUpImg} alt="Computer" />
+      </aside>
+      <section>
+        <h1>Please Fill out form to Register!</h1>
+        <Formik
+          initialValues={initialValues}
+          validate={validate}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ errors, touched }) => (
+            <Form>
+              <label htmlFor="fullName">Full Name:</label>
+              <Field
+                name="fullName"
+                className={`${errors.fullName && touched.fullName ? "error" : ""}`}
+              />
+              <ErrorMessage name="fullName" render={displayError} />
 
-            <label htmlFor="email">Email:</label>
-            <Field name="email" className={`${errors.email ? "error" : ""}`} />
-            <ErrorMessage name="email" />
+              <label htmlFor="userName">Username:</label>
+              <Field
+                name="userName"
+                className={`${errors.userName && touched.userName ? "error" : ""}`}
+              />
+              <ErrorMessage name="userName" render={displayError} />
 
-            <label htmlFor="password">Password:</label>
-            <Field
-              name="password"
-              type="password"
-              className={`${errors.password ? "error" : ""}`}
-            />
-            <ErrorMessage name="password" />
+              <label htmlFor="email">Email:</label>
+              <Field
+                name="email"
+                className={`${errors.email && touched.email ? "error" : ""}`}
+              />
+              <ErrorMessage name="email" render={displayError} />
 
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <Field
-              name="confirmPassword"
-              type="password"
-              className={`${errors.password ? "error" : ""}`}
-            />
-            <ErrorMessage name="confirmPassword" />
+              <label htmlFor="password">Password:</label>
+              <Field
+                name="password"
+                type="password"
+                className={`${errors.password && touched.password ? "error" : ""}`}
+              />
+              <ErrorMessage name="password" render={displayError} />
 
-            <button type="submit">Register</button>
-          </Form>
-        )}
-      </Formik>
-      <div>Yes i have an account? <Link to='/'>Login</Link></div>
+              <label htmlFor="confirmPassword">Confirm Password:</label>
+              <Field
+                name="confirmPassword"
+                type="password"
+                className={`${errors.confirmPassword && touched.confirmPassword ? "error" : ""}`}
+              />
+              <ErrorMessage name="confirmPassword" render={displayError} />
+
+              <button type="submit">Register</button>
+            </Form>
+          )}
+        </Formik>
+        <div className="bottom-message">
+          Yes I have an account? <Link to="/">Login</Link>
+        </div>
+        <SocialLinks />
+      </section>
     </main>
   );
 };

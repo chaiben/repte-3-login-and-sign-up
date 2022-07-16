@@ -1,0 +1,1 @@
+export const displayError = (msg) => <div className="errorMessage">{msg}</div>;
