@@ -5,6 +5,7 @@ import { VALID_EMAIL } from "../constants";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { displayError } from "../includes/form";
 import loginImg from "../assets/login.png"
+import './LogIn.css'
 
 const LogIn = () => {
   const [initialValues, setInitialValues] = useLocalStorage("loginForm", {
@@ -67,6 +68,8 @@ const LogIn = () => {
       <aside>
         <img className="main-image" src={loginImg} alt="Computer" />
       </aside>
+      <div className="half-background"></div>
+      <div className="abstract-background"></div>
     </main>
   );
 };

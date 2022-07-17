@@ -1,0 +1,27 @@
+main {
+  position: relative;
+}
+aside,
+section {
+  z-index: 1;
+}
+.abstract-background2 {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  background-image: url("../assets/abstract2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 50%;
+  max-width: 428px;
+  height: auto;
+  aspect-ratio: 428/535;
+}
+@media only screen and (max-width: 600px) {
+  .abstract-background2 {
+    max-width: 214px;
+    left: 30%;
+    width: 60%;
+  }
+}

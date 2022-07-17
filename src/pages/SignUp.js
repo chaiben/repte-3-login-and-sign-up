@@ -5,6 +5,7 @@ import { VALID_EMAIL, VALID_PASSWORD } from "../constants";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { displayError } from "../includes/form";
 import signUpImg from "../assets/signup.png"
+import './SignUp.css'
 
 const SignUp = () => {
   const [initialValues, setInitialValues] = useLocalStorage("signUpForm", {
@@ -48,6 +49,7 @@ const SignUp = () => {
 
   return (
     <main className="sign-up">
+      <div className="abstract-background2"></div>
       <aside>
         <img className="main-image" src={signUpImg} alt="Computer" />
       </aside>

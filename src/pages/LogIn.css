@@ -1,0 +1,30 @@
+main {
+  position: relative;
+}
+aside,
+section {
+  z-index: 1;
+}
+.half-background {
+  background-color: #afb3ff;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30%;
+  height: 100%;
+  z-index: 0;
+}
+.abstract-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url('../assets/abstract1.png');
+  z-index: 0;
+  width: 230px;
+  height: 172px;
+}
+@media only screen and (max-width: 600px) {
+  .half-background {
+    display: none;
+  }
+}
