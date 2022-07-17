@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
-import { VALID_EMAIL, VALID_PASSWORD } from "../constants";
+import { VALID_EMAIL, VALID_PASSWORD, VALID_USERNAME } from "../constants";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { displayError } from "../includes/form";
 import signUpImg from "../assets/signup.png"
@@ -24,6 +24,8 @@ const SignUp = () => {
 
     if (!values.userName) {
       errors.userName = "Required";
+    } else if (!VALID_USERNAME.test(values.userName)) {
+      errors.userName = "This fiels do not accept spaces or dot (.)"
     }
 
     if (!values.email) {
