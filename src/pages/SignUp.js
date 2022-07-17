@@ -15,7 +15,7 @@ const SignUp = () => {
     password: "",
     confirmPassword: "",
   });
-  const validate = (values, touched) => {
+  const validate = (values) => {
     setInitialValues(values);
     const errors = {};
     if (!values.fullName) {
