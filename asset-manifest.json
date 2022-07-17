@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/repte-3-login-and-sign-up/static/css/main.6293dcff.css",
+    "main.js": "/repte-3-login-and-sign-up/static/js/main.90e40743.js",
+    "static/media/login.png": "/repte-3-login-and-sign-up/static/media/login.d0a5af9da49e49e6ef3c.png",
+    "static/media/signup.png": "/repte-3-login-and-sign-up/static/media/signup.0d76d7a7aecfb5e8a07f.png",
+    "static/media/whatsapp.svg": "/repte-3-login-and-sign-up/static/media/whatsapp.3780b84750e4111b8866.svg",
+    "static/media/telegram.svg": "/repte-3-login-and-sign-up/static/media/telegram.c54a80339cb07747bf91.svg",
+    "index.html": "/repte-3-login-and-sign-up/index.html",
+    "static/media/facebook.svg": "/repte-3-login-and-sign-up/static/media/facebook.b1eda6e02e20a23759ec.svg",
+    "main.6293dcff.css.map": "/repte-3-login-and-sign-up/static/css/main.6293dcff.css.map",
+    "main.90e40743.js.map": "/repte-3-login-and-sign-up/static/js/main.90e40743.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6293dcff.css",
+    "static/js/main.90e40743.js"
+  ]
+}
