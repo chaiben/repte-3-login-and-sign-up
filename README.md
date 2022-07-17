@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# S8. Repte #3 - Login & Sign Up
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
+At this repository you can find the Log In and Sign Up forms with a complete valitaion. 
 
-In the project directory, you can run:
+### Objectives
 
-### `npm start`
+- The User can see the Log In view.
+- The User can see Sign Up view.
+- The User cannot submit the form if there is any empty input (both login and signup).
+- Email must be in the correct format, otherwise an error popup must be displayed.
+- The password must comply with:
+    - Minimum 6 characters.
+    - Use at least one capital letter.
+    - Use at least a lowercase letter.
+    - Contain some special character: . | , | * | + | -
+    - The form cannot be submitted if the passwords do not match (you must receive an error message).
+- The Username cannot contain spaces or periods.
+- Deploy the web
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screen shots
+![Img1](./src/assets/screen1.jpg)
 
-### `npm test`
+![Img2](./src/assets/screen2.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to install
 
-### `npm run build`
+1. Clone this repository 
+    > `git clone https://github.com/chaiben/repte-3-login-and-sign-up`
+2. Access the app directory
+    > `cd login-and-sign-up`
+4. Install all 
+    >`npm install`
+5. Run
+    >`npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to use
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This app show all forms results at the console log.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Some metrics
 
-### `npm run eject`
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=bugs)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=chaiben_repte-3-login-and-sign-up&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=chaiben_repte-3-login-and-sign-up)
