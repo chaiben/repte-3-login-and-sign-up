@@ -1,8 +1,10 @@
-# S8. Repte #3 - Login & Sign Up
+# Repte #3 - Login & Sign Up
 
 
 ## Description
-At this repository you can find the Log In and Sign Up forms with a complete valitaion. 
+At this repository you can find the Login and Sign Up forms with a complete validation. 
+
+You can also see the project deployed [here](https://chaiben.github.io/repte-3-login-and-sign-up/).
 
 ### Objectives
 
@@ -38,7 +40,13 @@ At this repository you can find the Log In and Sign Up forms with a complete val
 
 ## How to use
 
-This app show all forms results at the console log.
+This app does the form validation. If the validation return an error, it will be shown. If any error is found, the app will print the form data at a console log.
+
+## References used
+- [Deploy to GIT pages](https://create-react-app.dev/docs/deployment/#github-pages)
+- [Youtube - How to Deploy React App to GitHub Pages](https://www.youtube.com/watch?v=F8s4Ng-re0E)
+- [Formik - React Component to Form validations](https://formik.org/)
+- [Test Regex expressions](https://regexr.com/)
 
 ## Some metrics
 
